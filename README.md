@@ -1,3 +1,3 @@
 # beyondmachines.github.io
 
-Updating the page offline.
+Updating the page offline.  
