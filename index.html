@@ -1,77 +1,128 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="BeyondMachines - Cybersecurity Challenges Platform">
     <meta name="author" content="BeyondMachines">
     <title>BeyondMachines Cyber Challenges</title>
-    <link rel="canonical" href="https://beyondmachines.net/">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="img/icon.png" sizes="32x32" />
-    
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex text-center h-100 text-white bg-dark">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="https://beyondmachines.net">
-                        <img src="img/Code_Onion_White.png" alt="BeyondMachines" height="30">
-                        BeyondMachines
-                    </a>
+    <style>
+        .bg-custom-dark { background-color: #1a1a1a; }
+        .text-custom-yellow { color: #ffc107; }
+        .border-custom-yellow { border-color: #ffc107 !important; }
+        .modal-content { background-color: #2a2a2a; }
+        .footer-text { color: #ffffff; } 
+    </style>
+</head>
+<body class="d-flex flex-column h-100 text-white bg-custom-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://beyondmachines.net">
+                    <img src="img/Code_Onion_White.png" alt="BeyondMachines" height="30" class="me-2">
+                    BeyondMachines
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="btn custom-button btn-outline-warning" href="https://beyondmachines.net/">Explore BeyondMachines</a>
+                            <a class="btn btn-outline-warning me-2" href="https://beyondmachines.net/">Join BeyondMachines</a>
                         </li>
-                        <li class="nav-item ms-2">
-                            <a class="btn custom-button btn-outline-warning" href="https://yieldhog.beyondmachines.net/">Visit YieldHog</a>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-warning" href="https://yieldhog.beyondmachines.net/">Explore Vulnerabilities at YieldHog</a>
                         </li>
                     </ul>
                 </div>
-              </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        <div class="container my-5">
+            <h1 class="display-4 text-center mb-4">BeyondMachines Cybersecurity Challenges</h1>
+            <p class="lead text-center">Test your skills and solve cybersecurity challenges designed to enhance your knowledge.</p>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <div class="card bg-dark border-custom-yellow mb-4">
+                        <div class="card-header bg-custom-dark text-custom-yellow">
+                            <h2 class="mb-0">Current Challenge: ByteBreach 2024</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">ByteBreach is part of the preparation for our "The Day After Production - How It Feels When Your Platform Gets Hacked in Real Time" workshop, to be held at Base42 on December 14, 2024.</p>
+                            <p class="card-text">Start Time: October 1, 2024 12:00 PM UTC</p>
+                            <p class="card-text">End Time: December 1, 2024 11:59 PM UTC</p>
+                            <h5 class="mt-4">Challenge Details:</h5>
+                            <ul>
+                                <li>Scavenger hunt format</li>
+                                <li>Find links to the next clue and collect tokens</li>
+                                <li>Final challenge provides an email to send collected tokens</li>
+                                <li>Include a detailed explanation of your solution</li>
+                            </ul>
+                            <h5 class="mt-4">Prizes:</h5>
+                            <ul>
+                                <li>First Prize:
+                                    <ul>
+                                        <li>Participate as a penetration tester in the workshop development and execution</li>
+                                        <li>Mentorship for penetration testing skills and result communication</li>
+                                    </ul>
+                                </li>
+                                <li>Second Prize:
+                                    <ul>
+                                        <li>Free attendance at the "The Day After Production" workshop</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#challengeModal">
+                                Start Challenge
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-dark border-custom-yellow">
+                        <div class="card-header bg-custom-dark text-custom-yellow">
+                            <h3 class="mb-0">Previous Challenges</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-white">No previous challenges yet. Stay tuned for future opportunities!</p>
+                            <p class="text-white">As we run more challenges, they will be listed here for reference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-custom-dark">
+        <div class="container text-center">
+            <span class="footer-text">© 2022-2024 Copyright: <a href="https://beyondmachines.net/" class="text-custom-yellow">BeyondMachines.net</a> - All Rights Reserved.</span>
         </div>
-      </header>
-  <main class="px-3">
-    <p class="display-6">Part of the BeyondMachines Cybersecurity Challenge Platform</p>
-    <p class="lead">Test your skills and solve cybersecurity challenges designed to enhance your knowledge.</p>
-    <hr class="warning">
-    <p class="lead">Our latest challenge is ByteBreach 2024</p>
-    <p>ByteBreach is part of the preparation for our "The Day After Production  - How It Feels When Your Platform Gets Hacked in Real Time" workshop, that will be held at Base42 on December 14, 2024</p>
-    <br>
-    <p>ByteBreach is a scavenger hunt. Find the link to the next clue, and collect tokens to confirm you have found each clue.</p>
-    <p>The final challenge will provide an email to send your collected tokens. Make sure you include a good explanation of your solution.</p> 
-    <p>We will be selecting winners for two awards:</p>
-    <ul class="text-start">
-      <li>First Prize: 
-        <ul>
-          <li>Participation in the development and execution of the "The Day After Production" workshop as a penetration tester</li>
-          <li>Mentorship to develop penetration testing skills as well as writing and communicating the pentest results.</li>
-        </ul>
-      </li>
-      <li>Second Prize: 
-        <ul>
-          <li>Free attendance at the workshop: "The Day After Production"</li>
-        </ul>
-      </li>
-    </ul>
-    <img src="img/cyber_challenge_demo.png" class="img-fluid" alt="Cyber Challenge Demo Image">
-    <hr class="warning">
-    <p class="lead">Developed as part of the BeyondMachines platform to offer practical, hands-on cybersecurity experiences.</p>
-    <p>Join us to explore more exciting challenges and projects.</p>
-    <br>
-    <p class="lead">
-      <a href="https://beyondmachines.net/" class="btn btn-lg btn-warning">Join BeyondMachines</a>
-    </p>
-  </main>
-  <footer class="mt-auto text-white-50">
-    <p>© 2024 <a href="https://beyondmachines.net/" class="text-white">BeyondMachines</a> - All Rights Reserved.</p>
-  </footer>
-</div>
-  </body>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="challengeModal" tabindex="-1" aria-labelledby="challengeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-custom-dark border-bottom border-custom-yellow">
+                    <h5 class="modal-title text-custom-yellow" id="challengeModalLabel">Challenge Status</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white">
+                    <p>Please be patient, the challenge hasn't started yet.</p>
+                    <p>The ByteBreach 2024 challenge will begin on October 1, 2024, at 12:00 PM UTC.</p>
+                    <p>Check back here when the challenge starts to participate!</p>
+                </div>
+                <div class="modal-footer bg-custom-dark border-top border-custom-yellow">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
