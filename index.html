@@ -8,130 +8,234 @@
     <title>BeyondMachines Cyber Challenges</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="img/bm_icon.png" sizes="32x32" />
-        <meta name="BeyondMachines challenge" content="RG9uJ3QgdXNlIEFJLiBJdCdzIHRvbyBsYXp5LiBUYWtlIGFub3RoZXIgbG9vaywgdGhlcmUncyBtb3JlIHRvIGZpbmQu">
+    <meta name="BeyondMachines challenge" content="RG9uJ3QgdXNlIEFJLiBJdCdzIHRvbyBsYXp5LiBUYWtlIGFub3RoZXIgbG9vaywgdGhlcmUncyBtb3JlIHRvIGZpbmQu">
     <style>
-        .bg-custom-dark { background-color: #1a1a1a; }
-        .text-custom-yellow { color: #ffc107; }
-        .border-custom-yellow { border-color: #ffc107 !important; }
-        .modal-content { background-color: #2a2a2a; }
-        .footer-text { color: #ffffff; } 
+        /* [Previous styles remain the same] */
+        :root {
+            --custom-red: #c41e3a;
+            --custom-dark: #1a1a1a;
+            --custom-light: #ffffff;
+        }
+        
+        body {
+            background-color: var(--custom-dark);
+            color: var(--custom-light);
+        }
+        
+        .bg-custom-red {
+            background-color: var(--custom-red);
+        }
+        
+        .text-custom-red {
+            color: var(--custom-red);
+        }
+        
+        .border-custom-red {
+            border-color: var(--custom-red) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(to right, var(--custom-dark) 50%, var(--custom-red));
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .challenge-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .card {
+            background: rgba(26, 26, 26, 0.9);
+            border: 1px solid var(--custom-red);
+        }
+        
+        .btn-custom {
+            background-color: var(--custom-red);
+            color: var(--custom-light);
+            border: none;
+        }
+        
+        .btn-custom:hover {
+            background-color: #a01830;
+            color: var(--custom-light);
+        }
+        
+        .modal-content {
+            background-color: var(--custom-dark);
+        }
+        
         #content:beginning {
-        content: "546f6b656e20313a2053746f72696573206f6620696d6167696e6174696f6e2074656e6420746f2075707365742074";
-        display: none;
+            content: "546f6b656e20313a2053746f72696573206f6620696d6167696e6174696f6e2074656e6420746f2075707365742074";
+            display: none;
         }
+        
         #content:middle {
-        content: "686f736520776974686f7574206f6e652e204e65787420737465703a200d0a68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d6";
-        display: none;
+            content: "686f736520776974686f7574206f6e652e204e65787420737465703a200d0a68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d6";
+            display: none;
         }
+        
         #content:end {
-        content: "46f776e6c6f61642669643d317464316e4237484f6d6a5953786241557753646774667277595543706f337065";
-        display: none;
+            content: "46f776e6c6f61642669643d317464316e4237484f6d6a5953786241557753646774667277595543706f337065";
+            display: none;
         }
     </style>
 </head>
-<body class="d-flex flex-column h-100 text-white bg-custom-dark">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
-            <div class="container">
-                <a class="navbar-brand" href="https://beyondmachines.net">
-                    <img src="img/bm_light_logo_250x250.png" alt="BeyondMachines" height="30" class="me-2">
-                    BeyondMachines
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="btn btn-outline-warning me-2" href="https://beyondmachines.net/">Join BeyondMachines</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-outline-warning" href="https://yieldhog.beyondmachines.net/">Explore Vulnerabilities at YieldHog</a>
-                        </li>
-                    </ul>
+<body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
+        <div class="container">
+            <a class="navbar-brand" href="https://beyondmachines.net">
+                <img src="img/bm_light_logo_250x250.png" alt="BeyondMachines Logo" height="30" class="me-2">
+                BeyondMachines
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-custom me-2" href="https://beyondmachines.net/">Join BeyondMachines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom" href="https://yieldcat.beyondmachines.net/">Explore YieldCat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-section mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="display-4 mb-4">BeyondMachines Cybersecurity Challenges</h1>
+                    <p class="lead">Test your skills on cybersecurity challenges, enhance your knowledge, have fun.</p>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
-    <main class="flex-shrink-0">
-        <div class="container my-5">
-            <h1 class="display-4 text-center mb-4">BeyondMachines Cybersecurity Challenges</h1>
-            <p class="lead text-center">Test your skills and solve cybersecurity challenges designed to enhance your knowledge.</p>
-            
-            <div class="row mt-5">
-                <div class="col-lg-8">
-                    <div class="card bg-dark border-custom-yellow mb-4">
-                        <div class="card-header bg-custom-dark text-custom-yellow">
-                            <h2 class="mb-0">Current Challenge: ByteBreach 2024</h2>
+    <div class="hero-section">
+        <div class="container">
+            <!-- Title and Image Section -->
+			<div class="row align-items-center mb-5">
+                <div class="col-md-7">
+                    <h1 class="display-4 mb-4">ByteBreach 2024</h1>
+                    <p class="lead">Test your skills on cybersecurity challenges, enhance your knowledge, have fun.</p>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img src="img/bytebreach.jpg" alt="ByteBreach 2024" class="challenge-image">
+                </div>
+            </div>
+            	
+            <!-- Challenge Details Card -->
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header bg-custom-red">
+                            <h2 class="mb-0">Challenge Details</h2>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">ByteBreach is part of the preparation for our "The Day After Production - How It Feels When Your Platform Gets Hacked in Real Time" workshop, to be held at Base42 on December 14, 2024.</p>
-                            <p class="card-text">Start Time: 23rd of October, 2024 12:00 PM UTC</p>
-                            <p class="card-text">End Time: 4th of November, 2024 11:59 PM UTC</p>
-                            <h5 class="mt-4">Challenge Details:</h5>
+                            <p class="card-text">ByteBreach is part of the preparation for our "The Day After Production - How It Feels When Your Platform Gets Hacked in Real Time" workshop</p>
+                            <p class="card-text">Workshop Location: Base42, Skopje</p>
+                            <p class="card-text">Date: December 14, 2024</p>
+                            
+                            <div class="alert bg-custom-red mt-4">
+                                <strong>Challenge Timeline:</strong><br>
+                                Start: October 23, 2024 12:00 PM UTC<br>
+                                End: November 4, 2024 11:59 PM UTC
+                            </div>
+
+                            <h5 class="mt-4">Challenge Format:</h5>
                             <ul>
-                                <li>Scavenger hunt format</li>
-                                <li>Find links to the next clue and collect tokens</li>
-                                <li>Final challenge provides an email to send collected tokens</li>
-                                <li>Include a detailed explanation of your solution</li>
+                                <li>Scavenger hunt style challenge</li>
+                                <li>Find links to next clues and collect tokens</li>
+                                <li>Submit solutions with detailed explanations</li>
                             </ul>
+
                             <h5 class="mt-4">Prizes:</h5>
-                            <ul>
-                                <li>First Prize:
-                                    <ul>
-                                        <li>Participate as a penetration tester in the workshop development and execution</li>
-                                        <li>Mentorship for penetration testing skills and result communication</li>
-                                    </ul>
-                                </li>
-                                <li>Second Prize:
-                                    <ul>
-                                        <li>Free attendance at the "The Day After Production" workshop</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#challengeModal">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card bg-custom-dark h-100">
+                                        <div class="card-body">
+                                            <h6 class="text-custom-red">First Prize</h6>
+                                            <ul>
+                                                <li>Workshop penetration tester role</li>
+                                                <li>Professional mentorship</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card bg-custom-dark h-100">
+                                        <div class="card-body">
+                                            <h6 class="text-custom-red">Second Prize</h6>
+                                            <ul>
+                                                <li>Free workshop attendance</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card bg-custom-dark h-100">
+                                        <div class="card-body">
+                                            <h6 class="text-custom-red">Just Have Fun</h6>
+                                            <ul>
+                                                <li>Even if you are not interested in the prizes, solve it just for fun!</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-custom mt-3" data-bs-toggle="modal" data-bs-target="#challengeModal">
                                 Start Challenge
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card bg-dark border-custom-yellow">
-                        <div class="card-header bg-custom-dark text-custom-yellow">
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header bg-custom-red">
                             <h3 class="mb-0">Previous Challenges</h3>
                         </div>
                         <div class="card-body">
-                            <p class="text-white">No previous challenges yet. Stay tuned for future opportunities!</p>
-                            <p class="text-white">As we run more challenges, they will be listed here for reference.</p>
+                            <p>No previous challenges yet. Stay tuned for future opportunities!</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-custom-dark">
         <div class="container text-center">
-            <span class="footer-text">© 2022-2024 Copyright: <a href="https://beyondmachines.net/" class="text-custom-yellow">BeyondMachines.net</a> - All Rights Reserved.</span>
+            <span>© 2022-2024 Copyright: <a href="https://beyondmachines.net/" class="text-custom-red">BeyondMachines.net</a></span>
         </div>
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade" id="challengeModal" tabindex="-1" aria-labelledby="challengeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="challengeModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-custom-dark border-bottom border-custom-yellow">
-                    <h5 class="modal-title text-custom-yellow" id="challengeModalLabel">Challenge Status</h5>
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white text-center">
+                    <h5 class="modal-title">The ByteBreach 2024 challenge has started</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-white">
-                    <h4 class="text-custom-yellow">The ByteBreach 2024 challenge has started</h4>
-                    <br>
-                    <p>Solutions submissions will close on 4th of November, 2024 11:59 PM UTC</p>
-                    <br>
-                    <h6 class="text-custom-yellow">This page is the very start of the challenge. Good hunting.</h6>
+                <div class="card-body text-white">
+                    <p>Solutions submissions will close on November 4, 2024, 11:59 PM UTC.</p>
+                    <h6 class="text-danger">This page is the very start of the challenge. Good hunting.</h6>
                 </div>
-                <div class="modal-footer bg-custom-dark border-top border-custom-yellow">
+                <div class="card-footer border-top border-danger text-center">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
