@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeyondMachines Cybersecurity Challenges</title>
+    <title>BeyondMachines Cybersecurity Challenges - Results</title>
 
     <meta property="og:title" content="BeyondMachines Cybersecurity Challenges" />
     <meta property="og:url" content="https://challenge.beyondmachines.net/" />
@@ -76,6 +76,18 @@
         body {
             padding-top: 120px;
         }
+        
+        .mention-list {
+            columns: 2;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .mention-list {
+                columns: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,104 +130,171 @@
         <!-- Hero Section -->
         <div class="row p-4 align-items-center rounded-3">
             <div class="col p-3">
-                <h1 class="display-5 fw-bold">BeyondMachines Cybersecurity Challenges </h1>
+                <h1 class="display-5 fw-bold">BeyondMachines Cybersecurity Challenges</h1>
                 <p class="lead">Test your skills on cybersecurity challenges, enhance your knowledge, have fun!</p>
             </div>
         </div>
     </div>
-        <!-- Current Challenge -->
-    <section id="current-challenge">
-        <div class="container">
-            <div class="row p-4 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-                <h2>Current Challenge</h2>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card border-0">
-                            <div class="card-body">
-                                <h3>ByteBreach 2025.1</h3>
-                                <p class="lead">A scavenger hunt with 6 tokens to discover. Test your skills and win prizes!</p>
-                                <ul class="list-unstyled mb-5">
-                                    <li class="mb-1">
-                                        <i class="bi bi-link-45deg me-2"></i>
-                                        Collect tokens, find clues to the next token
-                                    </li>
-                                    <li class="mb-1">
-                                        <i class="bi bi-collection me-2"></i>
-                                        Collect as many tokens as you can
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-file-text me-2"></i>
-                                        Submit detailed explanations
-                                    </li>
-                                    <li>
-                                        <i class="bi bi-camera-video me-2"></i>
-                                        <a href="https://www.youtube.com/watch?v=VlE4hNwsFlA&t=423s" target="_blank" rel="noopener noreferrer">Watch helpful hints video - because Token 4 cryptography seems hard</a>
-                                    </li>
-                                </ul>
-                                <div class="timeline-item">
-                                    <h5 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Challenge Timeline<span class="text-danger"> The challenge is live!</span></h5>
-                                    <p class="mb-2">Start: February 5, 2025, at Noon CET</p>
-                                    <p class="mb-2"><del>End: February 24, 2025, at Noon CET</del></p>
-                                    <p>End: Extended to February 26, 2025, at Noon CET</p>
-                                </div>
-                                <button class="btn btn-custom-primary mt-4" data-bs-toggle="modal" data-bs-target="#challengeModal">
-                                    Start Challenge
-                                </button>
-                                <a class="btn btn-warning mt-4 ms-4" href="https://forms.gle/B15sT3462e1JXYHo8" target="_blank" rel="noopener noreferrer">
-                                    Submit Solution
-                                </a>
 
+    <!-- Results Section -->
+    <section id="results">
+        <div class="container">
+            <!-- Challenge Recap -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5">                            
+                <div class="col-lg-8">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h3>ByteBreach 2025.1</h3>
+                            </h5>
+                            <p class="lead"><span class="text-danger"> Challenge Completed!</span></p>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-1">
+                                    <i class="bi bi-link-45deg me-2"></i>
+                                    Participants had to collect tokens and find clues to the next token
+                                </li>
+                                <li class="mb-1">
+                                    <i class="bi bi-collection me-2"></i>
+                                    Skills tested included OSINT, cryptography, web security, and more
+                                </li>
+                                <li>
+                                    <i class="bi bi-file-text me-2"></i>
+                                    Detailed writeups were required for prize consideration
+                                </li>
+                            </ul>
+                            <div class="timeline-item">
+                                <h5 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Challenge Timeline</h5>
+                                <p class="mb-2">Started: February 5, 2025, at Noon CET</p>
+                                <p>Ended: February 26, 2025, at Noon CET</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <img src="img/bytebreach.jpg" class="card-img-top" alt="ByteBreach 2024">
+                            <a class="btn btn-custom-primary mt-4" href="https://discord.gg/UNBD8A2v9K">
+                                Join Our Discord for Future Challenges
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body h-100">
-                                <h6><i class="bi bi-trophy"></i> First Prize</h6>
-                                <ul>
-                                    <li>One spot on The Day After Production Workshop (March 22nd)</li>
-                                    <li>You don't have to collect all tokens to compete for the Workshop</li>
-                                    <li>Do your best and have a great writeup</li>
-                                </ul>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="img/bytebreach.jpg" class="card-img-top" alt="ByteBreach 2025.1">
+                    </div>
+                </div>
+            </div>
+                      
+            <div class="row p-3 pt-lg-4 align-items-center rounded-3 border shadow-lg mb-5">
+                <h2>Challenge Winners</h2>
+                <div class="row row-cols-1 row-cols-md-3 gy-2 gx-4 mb-4">
+                    <!-- First Prize -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 winner-card">
+                            <div class="card-header bg-custom-primary text-white">
+                                <h5 class="mb-0"><i class="bi bi-trophy-fill me-2"></i>First Prize</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Damjan Gjorgievski</h5>
+                                <p class="card-text">Spot on The Day After Production Workshop (March 22nd)</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body h-100">
-                                <h6> <i class="bi bi-gift"></i> Second Prize</h6>
-                                <ul>
-                                    <li>€40 Amazon Gift Card</li>
-                                    <li>You have to collect all tokens to compete for the gift card</li>
-                                    <li>And make sure to have a great writeup</li>
-                                </ul>
+                    
+                    <!-- Second Prize -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 winner-card">
+                            <div class="card-header bg-custom-primary text-white">
+                                <h5 class="mb-0"><i class="bi bi-gift-fill me-2"></i>Second Prize</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Vasil Rendevski</h5>
+                                <p class="card-text">€40 Amazon Gift Card</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body h-100">
-                                <h6> <i class="bi bi-gift"></i> Third Prize</h6>
-                                <ul>
-                                    <li>€20 Amazon Gift Card</li>
-                                    <li>You have to collect all tokens to compete for the gift card</li>
-                                    <li>And make sure to have a great writeup</li>
-                                </ul>
+                    
+                    <!-- Third Prize -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 winner-card">
+                            <div class="card-header bg-custom-primary text-white">
+                                <h5 class="mb-0"><i class="bi bi-gift me-2"></i>Third Prize</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Antonio Mitevski</h5>
+                                <p class="card-text">€20 Amazon Gift Card</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Honorable Mentions -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5">
+                <h2>Successful Participants</h2>
+                
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="mention-list">
+                                <li class="mb-3">
+                                    <p class="fw-bold">Menna Isajlovska</p>
+                                </li>
+                                <li class="mb-3">
+                                    <p class="fw-bold">Tsafac Nkombong Regine Cyrille</p>
+                                </li>
+                                <li class="mb-3">
+                                    <p class="fw-bold">Sowat Kheang</p>
+                                </li>
+                                <li class="mb-3">
+                                    <p class="fw-bold">Filip Nikoloski</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Recognition -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-1">
+                <h2>Special Recognition</h2>
+                <div class="row row-cols-1 row-cols-md-3 gy-2 gx-4 mb-4">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-custom-secondary">
+                                <h5 class="mb-0">Best Story</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Viktor Ivanovski</h5>
+                                <p class="card-text">A writeup that is also a story!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-custom-secondary">
+                                <h5 class="mb-0">Reporting the bugs</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Matej Plavevski</h5>
+                                <p class="card-text">Sometimes there are bugs. Responsible disclosure helps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-custom-secondary">
+                                <h5 class="mb-0">Laziest Attempt</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Stephen Jason</h5>
+                                <p class="card-text">It takes more than random words in the solution to participate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-      
+
+
     <!-- Previous Challenges -->
     <section id="previous">
         <div class="container">
@@ -230,7 +309,7 @@
                                     <h3 class="card-title">ByteBreach 2024</h3>
                                     <p>Our first cybersecurity challenge featuring amazing solutions and great participation!</p>
                                     <div class="d-flex justify-content-between">
-                                        <a href="bytebreach2024.html" class="btn btn-custom-primary" target="_blank" rel="noopener noreferrer">View Results or Try the Challenge</a>
+                                        <a href="bytebreach2024.html" class="btn btn-custom-primary" target="_blank" rel="noopener noreferrer">View Results</a>
                                     </div>
                                 </div>
                             </div>
@@ -239,6 +318,7 @@
                 </div>
             </div>
         </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-custom-primary text-white py-4">
@@ -271,30 +351,6 @@
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="challengeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-custom-primary text-white">
-                    <h5 class="modal-title">ByteBreach 2025.1 challenge</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="text-danger">I have my suspicions...</h6>
-                    <p>Hey there. I think I've seen some people in the YieldCat.com team are building some other platform.</p>
-                    <p>I think they are going to mess up the security, and you should investigate.</p>
-                    <p>I know I'm sending you on a wild runaround. But so are the hackers, and they will start with some OSINT.</p>
-                    <p><strong>Just be very patient.</strong></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    
 </body>
 </html>
