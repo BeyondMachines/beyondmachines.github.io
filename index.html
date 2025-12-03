@@ -130,10 +130,15 @@
     <!-- Sponsor Banner -->
     <div class="sponsor-banner">
         <div class="container text-center">
-            <a href="#" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">
+            <span style="color: var(--primary-color);">
                 <i class="bi bi-shield-check me-2"></i>
-                Contact us to sponsor this challenge
-            </a>
+                Challenge supporters: 
+            </span>
+            <a href="https://sorsix.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Sorsix</a>, 
+            <a href="#" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Tessa SEC</a>, 
+            <a href="https://sourcico.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Sourcico</a>, 
+            <a href="https://womenintech.mk" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Women in Tech Macedonia</a>
+            <br> We welcome more supporters. Contact us to support the challenge!
         </div>
     </div>
     </div>
@@ -157,7 +162,7 @@
                     <div class="card border-0">
                         <div class="card-body">
                             <h3>ByteBreach 2025.2</h3>
-                            <p class="lead"><span class="text-success fw-bold">Challenge Coming Soon!</span></p>
+                            <div class="countdown-timer text-center mb-3" id="countdown"></div>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
                                     <i class="bi bi-link-45deg me-2"></i>
@@ -202,63 +207,81 @@
 
             <!-- Prizes Section -->
             <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5">
-                <h2 class="mb-4">Prizes</h2>
-                <!-- <div class="row row-cols-1 row-cols-md-3 gy-2 gx-4">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 border-warning">
+                <h3>Prizes</h3>
+                
+                <div class="row row-cols-1 row-cols-md-3 gy-3 gx-4 mb-3">
+                    <!-- First Prize -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-warning" style="border-width: 3px;">
                             <div class="card-header bg-warning text-dark">
-                                <h5 class="mb-0"><i class="bi bi-trophy-fill me-2"></i>First Prize</h5>
+                                <h5 class="mb-0"><i class="bi bi-trophy-fill me-2"></i>1st Place</h5>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title text-center mb-3">TBA</h4>
-                                <p class="card-text text-center">Stay tuned for prize announcements!</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Free attendance to <strong>"Cyber Everywhere All at Once"</strong> masterclass in May 2026, Skopje</li>
+                                    <li class="mb-2"><i class="bi bi-gift me-2"></i>Swag package from our supporters</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 border-secondary">
+                    <!-- Second & Third Prize -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-secondary" style="border-width: 2px;">
                             <div class="card-header bg-secondary text-white">
-                                <h5 class="mb-0"><i class="bi bi-gift-fill me-2"></i>Second Prize</h5>
+                                <h5 class="mb-0"><i class="bi bi-award-fill me-2"></i>2nd & 3rd Place</h5>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title text-center mb-3">TBA</h4>
-                                <p class="card-text text-center">Amazing prizes coming soon!</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>€50 Amazon gift card</li>
+                                    <li class="mb-2"><i class="bi bi-gift me-2"></i>Swag package from our supporters</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100 border-danger">
-                            <div class="card-header bg-danger text-white">
-                                <h5 class="mb-0"><i class="bi bi-gift me-2"></i>Third Prize</h5>
+                    <!-- Fourth & Fifth Prize -->
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="bi bi-gift-fill me-2"></i>4th & 5th Place</h5>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title text-center mb-3">TBA</h4>
-                                <p class="card-text text-center">More details coming!</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Swag package from our supporters</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div class="alert alert-warning mt-3" role="alert">
-                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                    Prize details will be announced soon. Follow our Discord for updates!
+                </div>
+                <div class="row">
+                <!-- Prize Terms -->
+                    <div class="col-12">
+                        <div class="alert alert-info mb-0" role="alert">
+                            <ul class="mb-0 small">
+                                <li><strong>Recognition for all: Everyone who completes any part of the challenge and submits a solution gets an honobable mention as a successful participant</strong></li>
+                                <li><strong>Writeup mandatory!</strong> Prizes awarded only if there is a writeup of the challenge</li>
+                                <li>Swag packages can be picked up in Skopje or sent via cargo services within Macedonia</li>
+                                <li>No international shipping available</li>
+                                <li>Prizes cannot be exchanged for cash</li>
+                                <li>The masterclass ticket can be transferred to another person by the winner</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Rules Section -->
             <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="rules">
-                <h2 class="mb-4"><i class="bi bi-book me-2"></i>Challenge Rules</h2>
+                <h3 class="mb-4">Challenge Rules</h3>
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title mb-3">How to Play</h5>
+                            <h5 class="card-title mb-3">How to Participate</h5>
                             <ol class="mb-4">
                                 <li class="mb-2">Start from this page - it contains your first clue</li>
                                 <li class="mb-2">Find and collect tokens throughout the challenge</li>
                                 <li class="mb-2">Each token leads to the next step</li>
                                 <li class="mb-2">Document your journey in a detailed writeup</li>
-                                <li class="mb-2">Submit your solution before the deadline</li>
+                                <li class="mb-2">You can submit even if you haven't collected all tokens</li>
                             </ol>
                             
                             <h5 class="card-title mb-3 mt-4">Important Guidelines</h5>
@@ -266,7 +289,7 @@
                                 <li class="mb-2"><strong>No destructive actions:</strong> Do not attempt to damage, deface, or disrupt any systems</li>
                                 <li class="mb-2"><strong>Writeup required:</strong> Detailed documentation is essential for prize consideration</li>
                                 <li class="mb-2"><strong>Be ethical:</strong> Follow responsible disclosure practices</li>
-                                <li class="mb-2"><strong>Ask for help:</strong> Join our Discord if you're stuck, but no spoilers!</li>
+                                <li class="mb-2"><strong>Ask for help:</strong> Join our Discord if you're stuck. We'll give hints if people are desperately stuck, but no spoilers!</li>
                                 <li class="mb-2"><strong>Have fun:</strong> This is a learning experience - enjoy the journey!</li>
                             </ul>
                         </div>
@@ -354,6 +377,52 @@
         function scrollToRules() {
             document.getElementById('rules').scrollIntoView({ behavior: 'smooth' });
         }
+    </script>
+    
+    <script>
+        function updateCountdown() {
+            const challengeStart = new Date('2025-12-15T12:00:00+01:00'); // Noon CET
+            const now = new Date();
+            const diff = challengeStart - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = 
+                    '<span class="text-success fw-bold">Challenge is Live!</span>';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                        `<div>
+                            <div style="
+                                font-size: 2.5rem; 
+                                font-weight: bold; 
+                                color: #000;
+                                font-family: 'Courier New', Consolas, monospace;
+                                text-shadow: 
+                                    -1px -1px 0 #fff,
+                                    1px -1px 0 #fff,
+                                    -1px 1px 0 #fff,
+                                    1px 1px 0 #fff,
+                                    -2px 0 0 #fff,
+                                    2px 0 0 #fff,
+                                    0 2px 0 #fff,
+                                    0 -2px 0 #fff;
+                                letter-spacing: 0.1em;
+                            ">
+                                ${String(days).padStart(2, '0')}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s
+                            </div>
+                            <div style="font-size: 1rem; color: #6c757d; margin-top: 0.5rem;">until challenge starts</div>
+                        </div>`;
+                }
+
+                // Update immediately and then every second
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
