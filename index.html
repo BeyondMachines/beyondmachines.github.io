@@ -165,7 +165,7 @@
                     <div class="card border-0">
                         <div class="card-body">
                             <h3>ByteBreach 2025.2</h3>
-                            <div class="countdown-timer text-center mb-3" id="countdown"></div>
+                            <div class="mb-3" id="countdown"></div>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
                                     <i class="bi bi-link-45deg me-2"></i>
@@ -177,7 +177,7 @@
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-file-text me-2"></i>
-                                    Submit detailed writeups for prize consideration
+                                    <span class="text-decoration-line-through">Submit detailed writeups for prize consideration</span>
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-people-fill me-2"></i>
@@ -190,14 +190,6 @@
                                 <p class="mb-2"><strong>Start:</strong> December 15, 2025, at Noon CET</p>
                                 <p class="mb-2"><strong>End:</strong> January 02, 2026, at Noon CET</p>
                             </div>
-
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="bi bi-link-45deg me-2"></i>
-                                    <a href="https://forms.gle/skRCo5FFSwYDPb8Y9">Submit collected tokens here</a>
-                                </li>
-                                
-                            </ul>
 
                             <div class="d-flex gap-2 flex-wrap mt-4">
                                 <a class="btn btn-custom-primary btn-lg" href="https://discord.gg/UNBD8A2v9K">
@@ -401,7 +393,7 @@
 
             if (diff <= 0) {
                 document.getElementById('countdown').innerHTML = 
-                    '<span class="text-success fw-bold">Challenge is Live! And it starts right in front of you.</span>';
+                    '<span class="text-dark fw-bold">Challenge Complete! No more submissions!<br><br>We are keeping ByteBreach challenge tasks online - You can solve it for fun and to exercise your skills.</span>';
                 return;
             }
 
