@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeyondMachines Cybersecurity Challenges - ByteBreach 2025.2</title>
+    <title>BeyondMachines Cybersecurity Challenges - ByteBreach 2026.1</title>
 
     <meta property="og:title" content="BeyondMachines Cybersecurity Challenges" />
     <meta property="og:url" content="https://challenge.beyondmachines.net/" />
     <meta property="og:description" content="Test your skills on cybersecurity challenges, enhance your knowledge, have fun!" />
-    <meta property="og:image" content="https://challenge.beyondmachines.net/img/bytebreach.jpg" />
-    <meta property="og:image:secure_url" content="https://challenge.beyondmachines.net/img/bytebreach.jpg" />
+    <meta property="og:image" content="https://challenge.beyondmachines.net/img/bytebreach2026.1.jpg" />
+    <meta property="og:image:secure_url" content="https://challenge.beyondmachines.net/img/bytebreach2026.1.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="BeyondMachines Cybersecurity Challenges" />
     <meta name="twitter:domain" content="beyondmachines.net" />
@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Test your skills on cybersecurity challenges, enhance your knowledge, have fun!" />
     <meta name="twitter:url" content="https://challenge.beyondmachines.net/" />
     <meta name="twitter:description" content="Learning not to Break Stuff by Breaking Stuff" />
-    <meta name="twitter:image" content="https://challenge.beyondmachines.net/img/bytebreach.jpg" />
+    <meta name="twitter:image" content="https://challenge.beyondmachines.net/img/bytebreach2026.1.jpg" />
     <meta name="twitter:creator" content="BeyondMachines" />
     <meta name="twitter:site" content="BeyondMachines Cybersecurity Challenges" />
 
@@ -75,11 +75,11 @@
         body {
             padding-top: 120px;
         }
-        
+
         .pulse-animation {
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
@@ -91,11 +91,10 @@
                 box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
             }
         }
-        
-        .countdown-timer {
+
+        .award-icon {
             font-size: 2rem;
-            font-weight: bold;
-            color: #dc3545;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -117,6 +116,9 @@
                         <a class="nav-link" href="#current">Current Challenge</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#awards">Awards</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#previous">Previous Challenges</a>
                     </li>
                     <li class="nav-item">
@@ -132,15 +134,8 @@
         <div class="container text-center">
             <span style="color: var(--primary-color);">
                 <i class="bi bi-shield-check me-2"></i>
-                Challenge supporters: 
+                Challenge supporters:
             </span>
-            <a href="https://www.satainternacional.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">SATA INTERNATIONAL</a>, 
-            <a href="https://sorsix.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Sorsix</a>, 
-            <a href="https://tessa-sec.com/" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Tessa SEC</a>, 
-            <a href="https://sourcico.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Sourcico</a>, 
-            <a href="https://semoscloud.com" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Semos Cloud</a>, 
-            <a href="https://base42.mk" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Base42</a>,
-            <a href="https://womenintech.mk" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">Women in Tech Macedonia</a>
             <br> We welcome more supporters. Contact us to support the challenge!
         </div>
     </div>
@@ -160,166 +155,130 @@
     <section id="current">
         <div class="container">
             <!-- Challenge Announcement -->
-            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5 pulse-animation">                            
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5 pulse-animation">
                 <div class="col-lg-7">
                     <div class="card border-0">
                         <div class="card-body">
-                            <h3>ByteBreach 2025.2</h3>
-                            <div class="mb-3" id="countdown"></div>
+                            <h3>ByteBreach 2026.1</h3>
+                            <p class="lead text-danger fw-bold"><i class="bi bi-circle-fill me-2" style="font-size:0.7rem;"></i>Challenge is LIVE!</p>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
-                                    <i class="bi bi-link-45deg me-2"></i>
-                                    Collect tokens and uncover clues leading to the next challenge
+                                    <i class="bi bi-search me-2"></i>
+                                    Follow the clues - they start right on this page
                                 </li>
                                 <li class="mb-2">
-                                    <i class="bi bi-collection me-2 "></i>
+                                    <i class="bi bi-key-fill me-2"></i>
+                                    Your goal: find the <strong>hash of the password</strong> of user <code>bozidar</code>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-collection me-2"></i>
                                     Test your skills in OSINT, cryptography, web security, and more
                                 </li>
                                 <li class="mb-2">
-                                    <i class="bi bi-file-text me-2"></i>
-                                    <span class="text-decoration-line-through">Submit detailed writeups for prize consideration</span>
-                                </li>
-                                <li class="mb-2">
                                     <i class="bi bi-people-fill me-2"></i>
-                                    Join our Discord community</a> for hints and discussions
+                                    Join our Discord community for hints and discussions
                                 </li>
                             </ul>
-                            
-                            <div class="timeline-item">
-                                <h5 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Challenge Timeline</h5>
-                                <p class="mb-2"><strong>Start:</strong> December 15, 2025, at Noon CET</p>
-                                <p class="mb-2"><strong>End:</strong> January 02, 2026, at Noon CET</p>
-                            </div>
 
                             <div class="d-flex gap-2 flex-wrap mt-4">
                                 <a class="btn btn-custom-primary btn-lg" href="https://discord.gg/UNBD8A2v9K">
                                     <i class="bi bi-discord me-2"></i>Join Discord
                                 </a>
-                                <button class="btn btn-outline-secondary btn-lg" onclick="scrollToResults()">
-                                    <i class="bi bi-book me-2"></i>View the Results
-                                </button>
+                                <a class="btn btn-outline-secondary btn-lg" href="#awards">
+                                    <i class="bi bi-trophy me-2"></i>View Awards
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="card">
-                        <img src="img/bytebreach.jpg" class="card-img-top" alt="I've added something in this site: https://cryptpad.fr/pad/#/2/pad/view/y77PNt4ibX8k97GA+8T4bqOFI49w7wbcehNS0DFn1Ag/p/embed/ You need a password. So here's a password, but it's also encrypted. OMSHCHTOXDCHHTVGMN Decrypt the password first. I've used a one-time pad. Because of course. You need the first paragraph of a book about Ana by Tolstoy, translated by Constance Garnett. PDF.">
+                        <img src="img/bytebreach2026.1.jpg" class="card-img-top" alt="[You need to listen to the numbers station base64band on Render]">
                     </div>
                 </div>
             </div>
 
-            <!-- Winners Section -->
-            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="results">
-                <h3 class="mb-4"></i>Challenge Results</h3>
-                
-                <div class="row mb-3">
-                    <!-- First Place -->
-                    <div class="col-md-4">
+            <!-- Awards Section -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="awards">
+                <h3 class="mb-4"><i class="bi bi-trophy-fill me-2"></i>Awards</h3>
+
+                <div class="row mb-4">
+                    <!-- WhatTheStack Tickets -->
+                    <div class="col-md-4 mb-4">
                         <div class="card h-100 border-warning">
                             <div class="card-header bg-warning text-dark text-center">
-                                <h5 class="mb-0"><i class="bi bi-trophy-fill me-2"></i>1st Place</h5>
+                                <div class="award-icon"><i class="bi bi-ticket-perforated-fill"></i></div>
+                                <h5 class="mb-0">WhatTheStack Ticket</h5>
                             </div>
-                            <div class="card-body text-center">
-                                <h5 class="mb-2">Marija Cieva</h5>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i>Free attendance to <strong>"Cyber Everywhere All at Once"</strong> masterclass in May 2026, Skopje</li>
-                                    <li class="mb-2"><i class="bi bi-gift me-2"></i>Swag package from our supporters</li>
+                            <div class="card-body">
+                                <p>The <strong>first three participants</strong> to submit the correct hash and a qualifying writeup will each receive a free ticket to the <strong>WhatTheStack 2026</strong> conference.</p>
+                                <hr>
+                                <p class="small mb-1"><strong>Requirements:</strong></p>
+                                <ul class="small mb-0">
+                                    <li>Correct hash of user <code>bozidar</code>'s password</li>
+                                    <li>Writeup linked from a publicly accessible URL</li>
+                                    <li>Must indicate you want the ticket when submitting</li>
+                                    <li>First three correct submissions for WTS ticket win!</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Second Place -->
-                    <div class="col-md-4">
-                        <div class="card h-100 border-secondary">
-                            <div class="card-header bg-secondary text-white text-center">
-                                <h5 class="mb-0"><i class="bi bi-award-fill me-2"></i>Runner up</h5>
+
+                    <!-- Internship -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-primary">
+                            <div class="card-header bg-custom-primary text-white text-center">
+                                <div class="award-icon"><i class="bi bi-building"></i></div>
+                                <h5 class="mb-0">Internship at BeyondMachines</h5>
                             </div>
-                            <div class="card-body text-center">
-                                <h5 class="mb-2">Aleksandra Spasenovska</h5>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>€50 Amazon gift card</li>
-                                    <li class="mb-2"><i class="bi bi-gift me-2"></i>Swag package from our supporters</li>
+                            <div class="card-body">
+                                <p>Apply for a paid internship at BeyondMachines running from <strong>June to September 2026</strong>.</p>
+                                <hr>
+                                <p class="small mb-1"><strong>Requirements:</strong></p>
+                                <ul class="small mb-0">
+                                    <li>Ideally, correct hash of user <code>bozidar</code>'s password, but not required</li>
+                                    <li>Writeup of what you did and how far you got - linked from a publicly accessible URL</li>
+                                    <li>Must indicate you want to apply for the internship when submitting</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Third Place -->
-                    <div class="col-md-4">
+
+                    <!-- Bragging Rights -->
+                    <div class="col-md-4 mb-4">
                         <div class="card h-100 border-secondary">
                             <div class="card-header bg-secondary text-white text-center">
-                                <h5 class="mb-0"><i class="bi bi-award-fill me-2"></i>Runner up</h5>
+                                <div class="award-icon"><i class="bi bi-patch-check-fill"></i></div>
+                                <h5 class="mb-0">Bragging Rights</h5>
                             </div>
-                            <div class="card-body text-center">
-                                <h5 class="mb-2">Sowat Kheang</h5>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i>€50 Amazon gift card</li>
-                                    <li class="mb-2"><i class="bi bi-gift me-2"></i>Swag package from our supporters</li>
+                            <div class="card-body">
+                                <p>Prove you cracked it. Get your name on the wall of successful participants.</p>
+                                <hr>
+                                <p class="small mb-1"><strong>Requirements:</strong></p>
+                                <ul class="small mb-0">
+                                    <li>Correct hash of user <code>bozidar</code>'s password</li>
+                                    <li>Writeup is <em>not</em> required</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <!-- Participants Card -->
-                        <div class="card">
-                            <div class="card-header bg-light">
-                                <h5 class="mb-0"><i class="bi bi-people-fill me-2"></i>Successful Participants</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <!-- Left Column -->
-                                    <div class="col-md-6">
-                                        <!-- Swag Award Winners -->
-                                        <h6 class="mb-3">Swag Package Award Winners</h6>
-                                        <ul class="mb-4">
-                                            <li class="mb-1">Damjan Ilic</li>
-                                            <li class="mb-1">Usman Haider</li>
-                                            <li class="mb-1">Simran Shilpakar</li>
-                                            <li class="mb-1">Nikola Dinevski</li>
-                                            <li class="mb-1">Matej Plavevski</li>
-                                            <li class="mb-1">Daniel Poposki</li>
-                                        </ul>
-
-                                        <!-- Participants Challenge -->
-                                        <h6 class="mb-3">Completed Challenge</h6>
-                                        <ul class="mb-4 mb-md-0">
-                                            <li class="mb-1">Nenad</li>
-                                            <li class="mb-1">Therealwaffle</li>
-                                            <li class="mb-1">Damjan Gjorgievski</li>
-                                            <li class="mb-1">Vaishnavi Sable</li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Right Column -->
-                                    <div class="col-md-6">
-                                        <!-- Honorable Mentions -->
-                                        <h6 class="mb-3">Honorable Mentions, receiving The Most Insecure Floppy Disk</h6>
-                                        <ul class="mb-0">
-                                            <li class="mb-2">
-                                                Basri Akaya - <strong>First Blood</strong>, fastest completed challenge
-                                            </li>
-                                            <li class="mb-2">
-                                                The Wekoslav - <strong>Writeup Overkill</strong>, coded an entire site for the writeup
-                                            </li>
-                                            <li class="mb-2">
-                                                Toni Jovanoski - <strong>The Tersest Writeup in History</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                Viktor Ivanovski - <strong>Unapologetic Denial of Service</strong>, self reported bombing of the API
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5><i class="bi bi-send-fill me-2"></i>How to Submit</h5>
+                            <p class="mb-2">To submit your solution, post it in our <a href="https://forms.gle/vjgc1QzcgsdknNbp8" target="_blank" rel="noopener noreferrer">submission form</a> with:</p>
+                            <ol class="mb-0">
+                                <li>The hash you found (if you did)</li>
+                                <li>A link to your writeup (website, Google Doc, HackMD, GitHub - anything publicly accessible) - if applying for a ticket or internship</li>
+                                <li>Which award you are going for (ticket, internship, or bragging rights)</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- Rules Section -->
             <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="rules">
                 <h3 class="mb-4">Challenge Rules</h3>
@@ -329,20 +288,16 @@
                             <h5 class="card-title mb-3">How to Participate</h5>
                             <ol class="mb-4">
                                 <li class="mb-2">Start from this page - it contains your first clue</li>
-                                <li class="mb-2">Find and collect tokens throughout the challenge</li>
-                                <li class="mb-2">Each token leads to the next step</li>
-                                <li class="mb-2">Document your journey in a detailed writeup</li>
-                                <li class="mb-2">You can submit even if you haven't collected all tokens</li>
-                                <li class="mb-2"><strong>Get unstuck:</strong> Daily writeups of general techniques start December 16th on our Discord server - learn without spoilers!</li>
-
+                                <li class="mb-2">Follow the trail of clues using your security skills</li>
+                                <li class="mb-2">Your final goal is the <strong>hash of the password of user <code>bozidar</code></strong></li>
+                                <li class="mb-2">Document your journey if you want a ticket or are applying for the internship</li>
                             </ol>
-                            
+
                             <h5 class="card-title mb-3 mt-4">Important Guidelines</h5>
-                            <ul class="mb-4">
+                            <ul class="mb-0">
                                 <li class="mb-2"><strong>No destructive actions:</strong> Do not attempt to damage, deface, or disrupt any systems</li>
-                                <li class="mb-2"><strong>Writeup required:</strong> Detailed documentation is essential for prize consideration</li>
                                 <li class="mb-2"><strong>Be ethical:</strong> Follow responsible disclosure practices</li>
-                                <li class="mb-2"><strong>Ask for help:</strong> Join our Discord if you're stuck. We'll give hints if people are desperately stuck, but no spoilers!</li>
+                                <li class="mb-2"><strong>Ask for help:</strong> Join our Discord if you're stuck - we'll give hints if people are desperately stuck, but no spoilers!</li>
                                 <li class="mb-2"><strong>Have fun:</strong> This is a learning experience - enjoy the journey!</li>
                             </ul>
                         </div>
@@ -359,13 +314,28 @@
                 <div class="col p-3">
                     <h2 class="text-center mb-4">Previous Challenges</h2>
                     <div class="row g-4">
+                        <!-- ByteBreach 2025.2 -->
+                        <div class="col-lg-4">
+                            <div class="card h-100 border shadow-sm">
+                                <img src="img/bytebreach.jpg" class="card-img-top challenge-image" alt="ByteBreach 2025.2">
+                                <div class="card-body">
+                                    <h3 class="card-title">ByteBreach 2025.2</h3>
+                                    <p class="small text-muted">December 15, 2025 – January 2, 2026</p>
+                                    <p>A token-hunting challenge spanning OSINT, cryptography, and web security - with a one-time pad twist.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="bytebreach2025-2.html" class="btn btn-custom-primary" target="_blank" rel="noopener noreferrer">View Results</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- ByteBreach 2025.1 -->
                         <div class="col-lg-4">
                             <div class="card h-100 border shadow-sm">
-                                <img src="img/bytebreach2025.1.jpg" class="card-img-top" alt="ByteBreach 2025.1">
+                                <img src="img/bytebreach2025.1.jpg" class="card-img-top challenge-image" alt="ByteBreach 2025.1">
                                 <div class="card-body">
                                     <h3 class="card-title">ByteBreach 2025.1</h3>
-                                    <p class="small text-muted">February 5 - February 26, 2025</p>
+                                    <p class="small text-muted">February 5 – February 26, 2025</p>
                                     <p>The first challenge of 2025 with exciting solutions and great community engagement!</p>
                                     <div class="d-flex justify-content-between">
                                         <a href="bytebreach2025-1.html" class="btn btn-custom-primary" target="_blank" rel="noopener noreferrer">View Results</a>
@@ -377,7 +347,7 @@
                         <!-- ByteBreach 2024 -->
                         <div class="col-lg-4">
                             <div class="card h-100 border shadow-sm">
-                                <img src="img/bytebreach2024.jpg" class="card-img-top" alt="ByteBreach 2024">
+                                <img src="img/bytebreach2024.jpg" class="card-img-top challenge-image" alt="ByteBreach 2024">
                                 <div class="card-body">
                                     <h3 class="card-title">ByteBreach 2024</h3>
                                     <p class="small text-muted">2024</p>
@@ -426,56 +396,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function scrollToResults() {
-            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-    
-    <script>
-        function updateCountdown() {
-            const challengeStart = new Date('2025-12-15T12:00:00+01:00'); // Noon CET
-            const now = new Date();
-            const diff = challengeStart - now;
-
-            if (diff <= 0) {
-                document.getElementById('countdown').innerHTML = 
-                    '<span class="text-dark fw-bold">Challenge Complete! See the winners below!<br><br>We are keeping ByteBreach challenge tasks online - You can solve it for fun and to exercise your skills.</span>';
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').innerHTML = 
-                        `<div>
-                            <div style="
-                                font-size: 2.5rem; 
-                                font-weight: bold; 
-                                color: #000;
-                                font-family: 'Courier New', Consolas, monospace;
-                                text-shadow: 
-                                    -1px -1px 0 #fff,
-                                    1px -1px 0 #fff,
-                                    -1px 1px 0 #fff,
-                                    1px 1px 0 #fff,
-                                    -2px 0 0 #fff,
-                                    2px 0 0 #fff,
-                                    0 2px 0 #fff,
-                                    0 -2px 0 #fff;
-                                letter-spacing: 0.1em;
-                            ">
-                                ${String(days).padStart(2, '0')}d ${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s
-                            </div>
-                            <div style="font-size: 1rem; color: #6c757d; margin-top: 0.5rem;">until challenge starts</div>
-                        </div>`;
-                }
-
-                // Update immediately and then every second
-                updateCountdown();
-                setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>
