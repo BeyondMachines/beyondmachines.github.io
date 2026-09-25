@@ -102,6 +102,110 @@
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
+
+        /* =========================================================
+           BEST NOTES - MONDRIAN LAYOUT
+           ========================================================= */
+
+        .mondrian-grid {
+            display: grid;
+            grid-template-columns: 0.55fr 2.35fr 1.35fr 0.75fr 1fr 1.75fr 1.05fr 1.1fr;
+            grid-template-rows: 1fr 1fr 1fr 1.35fr 0.75fr 0.75fr;
+            grid-template-areas:
+                "red red thus thus blue1 blue1 white1 git"
+                "red red qr qr blue1 blue1 white2 git"
+                "watcher watcher qr qr blue1 blue1 white3 rightwhite"
+                "watcher watcher qr qr tallwhite squint tallblue rightwhite"
+                "watcher watcher midempty midempty tallwhite squint tallblue rightwhite"
+                "leftbox revisit revisit bottomwhite tallwhite yellow tallblue rightbottom";
+            gap: 4px;
+            background-color: #333333;
+            border: 4px solid #333333;
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 552 / 315;
+            margin: 2rem auto;
+            box-sizing: border-box;
+        }
+
+        .m-cell {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.35;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .m-item-red {
+            grid-area: red;
+            background-color: #ef402b;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding-left: 14px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .m-item-thus {
+            grid-area: thus;
+            color: #0000ff;
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .m-item-blue1 {
+            grid-area: blue1;
+            background-color: #3f5da8;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .m-item-git { grid-area: git; color: #ef402b; font-size: 0.85rem; }
+        .m-item-qr { grid-area: qr; color: #000000; font-size: 0.8rem; }
+        .m-item-iwrote { grid-area: watcher; color: #ef402b; font-size: 0.82rem; }
+
+        .m-white-1 { grid-area: white1; }
+        .m-white-2 { grid-area: white2; }
+        .m-white-3 { grid-area: white3; }
+        .m-right-white { grid-area: rightwhite; }
+        .m-mid-empty { grid-area: midempty; }
+        .m-tall-white { grid-area: tallwhite; background-color: #ffffff; padding: 0; }
+        
+        .m-item-squint { grid-area: squint; color: #0000ff; font-size: 0.9rem; }
+        .m-tall-blue { grid-area: tallblue; background-color: #3f5da8; padding: 0; }
+        
+        .m-left-bottom { grid-area: leftbox; background-color: #ffffff; padding: 0; }
+        .m-item-revisit {
+            grid-area: revisit;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 0.75rem;
+            padding: 6px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .m-bottom-white { grid-area: bottomwhite; background-color: #ffffff; padding: 0; }
+        .m-item-yellow { grid-area: yellow; background-color: #f7c940; padding: 0; }
+        .m-right-bottom { grid-area: rightbottom; background-color: #ffffff; padding: 0; }
+
+        .mondrian-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .mondrian-grid {
+                min-width: 700px;
+                aspect-ratio: 552 / 315;
+            }
+        }
     </style>
 </head>
 <body>
@@ -119,13 +223,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#current">Current Challenge</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rules">Rules</a>
+                        <a class="nav-link" href="#current">Latest Updates</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#previous">Previous Challenges</a>
@@ -145,8 +243,8 @@
                 <i class="bi bi-shield-check me-2"></i>
                 Challenge supporters:
             </span>
-            <a href="https://wts.sh" class="text-decoration-none" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 500;">WhatTheStack Conference</a>
-            <br> We welcome more supporters. Contact us to support the challenge!
+            <a href="https://wts.sh" class="text-decoration-none" target="_blank" rel="noopener noreferrer"
+                style="color: var(--primary-color); font-weight: 500;">WhatTheStack Conference</a>
         </div>
     </div>
     </div>
@@ -164,161 +262,169 @@
     <!-- Current Challenge Section -->
     <section id="current">
         <div class="container">
-            <!-- Challenge Announcement -->
-            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5 pulse-animation">
-                <div class="col-lg-7">
+            <!-- Challenge Recap -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5">
+                <div class="col-lg-8">
                     <div class="card border-0">
                         <div class="card-body">
                             <h3>ByteBreach 2026.2</h3>
-                            <div class="countdown-timer text-center mb-3" id="countdown"></div>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
+                            <p class="lead"><span class="text-danger">Challenge Completed!</span></p>
+                            <ul class="list-unstyled mb-5">
+                                <li class="mb-1">
                                     <i class="bi bi-search me-2"></i>
-                                    Follow the clues - they start right on this page
+                                    Participants followed the clues starting right on the page
                                 </li>
-                                <li class="mb-2">
+                                <li class="mb-1">
                                     <i class="bi bi-key-fill me-2"></i>
-                                    Your goal: find the token in the vault. <strong>The token is wrapped in </strong> <code>ByteBreach{ }</code>
+                                    The goal was to find the token hidden inside the vault
                                 </li>
-                                <li class="mb-2">
+                                <li class="mb-1">
                                     <i class="bi bi-collection me-2"></i>
-                                    Test your skills in OSINT, cryptography, steganography, signal processing...
+                                    Skills tested included OSINT, cryptography, steganography, and signal processing
                                 </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-people-fill me-2"></i>
-                                    Join our Discord community for hints and discussions
+                                <li>
+                                    <i class="bi bi-file-text me-2"></i>
+                                    Writeups were required for the ticket to the workshop
                                 </li>
                             </ul>
-
                             <div class="timeline-item">
                                 <h5 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Challenge Timeline</h5>
-                                <p class="mb-2"><strong>Start:</strong> September 1, 2026, at Noon CET</p>
-                                <p><strong>End:</strong> September 19, 2026, at Noon CET</p>
+                                <p class="mb-2">Started: September 1, 2026, at Noon CET</p>
+                                <p>Ended: September 19, 2026, at Noon CET</p>
                             </div>
-
-                            <div class="d-flex gap-2 flex-wrap mt-4">
-                                <a class="btn btn-custom-primary btn-lg" href="https://discord.gg/UNBD8A2v9K">
-                                    <i class="bi bi-discord me-2"></i>Join Discord
-                                </a>
-                                <a class="btn btn-outline-secondary btn-lg" href="#awards">
-                                    <i class="bi bi-trophy me-2"></i>View Awards
-                                </a>
-                            </div>
+                            <p class="mt-3 text-muted">The ByteBreach 2026.2 challenge is closed. Thanks to everyone who
+                                took part!</p>
+                            <a class="btn btn-custom-primary mt-2" href="https://discord.gg/UNBD8A2v9K">
+                                Join Our Discord for Future Challenges
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="card">
-                        <img src="img/bytebreach2026.2.jpg" class="card-img-top" alt="[first clue is here]">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <img src="img/bytebreach2026.2.jpg" class="card-img-top" alt="ByteBreach 2026.2">
                     </div>
                 </div>
             </div>
-
-            <!-- Awards Section -->
-            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="awards">
-                <h3 class="mb-4"><i class="bi bi-trophy-fill me-2"></i>Awards</h3>
-
-                <div class="row mb-4">
-                    <!-- Workshop Spot -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 border-warning">
-                            <div class="card-header bg-warning text-dark text-center">
-                                <div class="award-icon"><i class="bi bi-mortarboard-fill"></i></div>
-                                <h5 class="mb-0">Workshop Spot</h5>
+    
+            <!-- Challenge Winner -->
+            <div class="row p-3 pt-lg-4 align-items-center rounded-3 border shadow-lg mb-5">
+                <h2>Challenge Winner</h2>
+                <div class="row row-cols-1 row-cols-md-3 gy-2 gx-4 mb-4">
+                    <!-- First Place -->
+                    <div class="col-lg-6 col-md-8 mx-auto mb-3">
+                        <div class="card h-100 border-warning text-center shadow-sm">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="bi bi-trophy-fill me-2"></i>1st Place</h5>
                             </div>
                             <div class="card-body">
-                                <p>The <strong>first participant</strong> to submit the correct hash and a qualifying writeup gets a free spot at our <a href="https://workshop.beyondmachines.net/" target="_blank" rel="noopener noreferrer">BeyondMachines Cyber Everywhere, AI in Everything Workshop</a>.</p>
-                                <hr>
-                                <p class="small mb-1"><strong>Requirements:</strong></p>
-                                <ul class="small mb-0">
-                                    <li>Correct token found
-                                    <li>Writeup linked from a publicly accessible URL</li>
-                                    <li>Must indicate you want the workshop spot when submitting</li>
-                                    <li>First correct submission wins!</li>
+                                <h4 class="card-title fw-bold">Damjan Ilikj</h4>
+                                <ul class="list-unstyled mt-3 mb-0">
+                                    <li class="mb-2">
+                                        <i class="bi bi-ticket-perforated-fill text-warning me-2"></i>
+                                        Free attendance to <strong>"Cyber Everywhere, AI in Everything"</strong> workshop!
+                                    </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Bragging Rights -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 border-primary">
-                            <div class="card-header bg-custom-primary text-white text-center">
-                                <div class="award-icon"><i class="bi bi-patch-check-fill"></i></div>
-                                <h5 class="mb-0">Bragging Rights at WhatTheStack</h5>
-                            </div>
-                            <div class="card-body">
-                                <p>Everyone who cracks the challenge gets their name on the Wall of Fame - and the list is <strong>published at the <a href="https://wts.sh" target="_blank" rel="noopener noreferrer">WhatTheStack Conference</a></strong>.</p>
-                                <hr>
-                                <p class="small mb-1"><strong>Requirements:</strong></p>
-                                <ul class="small mb-0">
-                                    <li>Correct token found
-                                    <li>Writeup is <em>not</em> required</li>
-                                    <li>Tell us the name or handle you want published</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Honorable Mentions -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 border-secondary">
-                            <div class="card-header bg-secondary text-white text-center">
-                                <div class="award-icon"><i class="bi bi-emoji-sunglasses-fill"></i></div>
-                                <h5 class="mb-0">Honorable Mentions</h5>
-                            </div>
-                            <div class="card-body">
-                                <p>We hand out our traditional made-up awards for the submissions that stand out - First Blood, most creative detour, most overkill writeup, and whatever else you surprise us with.</p>
-                                <hr>
-                                <p class="small mb-1"><strong>Requirements:</strong></p>
-                                <ul class="small mb-0">
-                                    <li>Submit something memorable - you don't have to finish the challenge</li>
-                                    <li>A writeup helps us see what you did</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5><i class="bi bi-send-fill me-2"></i>How to Submit</h5>
-                            <p class="mb-2">To submit your solution, post it in our <a href="https://forms.gle/XJHDyn2RuzQGkZsR7" target="_blank" rel="noopener noreferrer">submission form</a> with:</p>
-                            <ol class="mb-0">
-                                <li>The token you found</li>
-                                <li>A link to your writeup (website, Google Doc, HackMD, GitHub - anything publicly accessible) - required for a workshop spot</li>
-                                <li>Which award you are going for (workshop spot or bragging rights)</li>
-                                <li>The name or handle you want on the Wall of Fame</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Rules Section -->
-            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5" id="rules">
-                <h3 class="mb-4">Challenge Rules</h3>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">How to Participate</h5>
-                            <ol class="mb-4">
-                                <li class="mb-2">Start from this page - it contains your first clue</li>
-                                <li class="mb-2">Follow the trail of clues using your security skills</li>
-                                <li class="mb-2">Your final goal is the token in the vault. <strong>The token is wrapped in <code>ByteBreach{ }</code></strong></li>
-                                <li class="mb-2">Document your journey if you want a workshop spot</li>
-                            </ol>
-
-                            <h5 class="card-title mb-3 mt-4">Important Guidelines</h5>
-                            <ul class="mb-0">
-                                <li class="mb-2"><strong>No destructive actions:</strong> Do not attempt to damage, deface, or disrupt any systems</li>
-                                <li class="mb-2"><strong>Be ethical:</strong> Follow responsible disclosure practices</li>
-                                <li class="mb-2"><strong>Ask for help:</strong> Join our Discord if you're stuck - we'll give hints if people are desperately stuck, but no spoilers!</li>
-                                <li class="mb-2"><strong>Have fun:</strong> This is a learning experience - enjoy the journey!</li>
-                            </ul>
+    
+            <!-- Best Notes Section (Mondrian Grid Quotes) -->
+            <div class="row p-4 pt-lg-4 align-items-center rounded-3 border shadow-lg mb-5">
+                <h2>Best Notes</h2>
+                <p class="text-muted mb-4">Highlights and memorable observations left by participants during ByteBreach
+                    2026.2:</p>
+    
+                <div class="mondrian-wrapper">
+                    <div class="mondrian-grid shadow-sm">
+                        <!-- RED BEST NOTES -->
+                        <div class="m-cell m-item-red">Best notes</div>
+    
+                        <!-- THUS SPOKE OCTAL -->
+                        <div class="m-cell m-item-thus">Thus Spoke Octal</div>
+    
+                        <!-- LARGE BLUE QUOTE -->
+                        <div class="m-cell m-item-blue1">
+                            As any cybersecurity enthusiast would do, I scanned a random QR code and opened it directly on
+                            my machine
+                            <br><br>
+                            <i>Luckily, it was just the end of the internet, phew</i>
                         </div>
+    
+                        <!-- .GIT QUOTE -->
+                        <div class="m-cell m-item-git">There's a .git<br><br>There's always a .git</div>
+    
+                        <!-- QR CODE QUOTE -->
+                        <div class="m-cell m-item-qr">
+                            The QR code turned out to be a joke,
+                            <i>I honestly felt kind of betrayed after getting all that way for nothing</i>
+                        </div>
+    
+                        <!-- WATCHER SCRIPT -->
+                        <div class="m-cell m-item-iwrote">
+                            I wrote a little watcher script, a crawler that polls the announcement page on a loop and diffs
+                            the HTML
+                            <br><br>
+                            The moment anything changed I'd see exactly what
+                        </div>
+    
+                        <!-- THREE SMALL WHITE BOXES -->
+                        <div class="m-cell m-white-1"></div>
+                        <div class="m-cell m-white-2"></div>
+                        <div class="m-cell m-white-3"></div>
+    
+                        <!-- LARGE WHITE BOX ON FAR RIGHT -->
+                        <div class="m-cell m-right-white"></div>
+    
+                        <!-- WHITE BOX BELOW QR QUOTE -->
+                        <div class="m-cell m-mid-empty"></div>
+    
+                        <!-- TALL WHITE RECTANGLE -->
+                        <div class="m-cell m-tall-white"></div>
+    
+                        <!-- SQUINT QUOTE -->
+                        <div class="m-cell m-item-squint">If I had squint hard enough I would probably get INHIBIT</div>
+    
+                        <!-- TALL BLUE RECTANGLE -->
+                        <div class="m-cell m-tall-blue"></div>
+    
+                        <!-- BOTTOM ROW -->
+                        <!-- Small WHITE box before "Will have to revisit..." -->
+                        <div class="m-cell m-left-bottom"></div>
+    
+                        <!-- Revisit quote -->
+                        <div class="m-cell m-item-revisit">Will have to revisit later when my sanity meter replenishes</div>
+    
+                        <!-- Small WHITE box after revisit quote -->
+                        <div class="m-cell m-bottom-white"></div>
+    
+                        <!-- Yellow -->
+                        <div class="m-cell m-item-yellow"></div>
+    
+                        <!-- Final WHITE box -->
+                        <div class="m-cell m-right-bottom"></div>
                     </div>
+                </div>
+            </div>
+    
+            <!-- Successful Participants -->
+            <div class="row p-4 pt-lg-3 align-items-center rounded-3 border shadow-lg mb-5">
+                <h2>Successful Participants</h2>
+                <p class="mb-3">These participants successfully cracked ByteBreach 2026.2:</p>
+    
+                <div class="col-12">
+                    <ul class="mention-list">
+                        <li class="mb-1">Viktor Ivanovski</li>
+                        <li class="mb-1">Damjan Gjorgievski</li>
+                        <li class="mb-1">Aleksandra Spasenovska</li>
+                        <li class="mb-1">Daniel Popovski</li>
+                        <li class="mb-1">Syreone</li>
+                        <li class="mb-1">Dimitar Karadjovski</li>
+                        <li class="mb-1">Kristijan Angelovski</li>
+                        <li class="mb-1">Monika Jovevska</li>
+                    </ul>
                 </div>
             </div>
         </div>
